@@ -1,5 +1,5 @@
 <?php
-   define('AFFICHE', 'ca');
+   define('AFFICHE', 'me');
    $langue = array(
        'en'=>'<p style="color:bleue">I like PHP !</p>', 
        'fr'=> '<p style="color:bleue">J\'aime PHP!</p>',
@@ -22,19 +22,24 @@
     <p>hello world</p>
     <?php
      // echo $langue[AFFICHE];
-    if(AFFICHE == 'en'){
+    switch(AFFICHE){ 
+        case 'en':
+        case 'us':
         echo $langue['en'];
-    }
-    else if(AFFICHE == 'fr' || AFFICHE == 'ca'){
+        break;
+        case 'fr':
+        case 'be':
+        case 'ca':
         echo $langue['fr'];
-    }
-    elseif(AFFICHE == 'es'){
+        break;
+        case 'es':
+        case 'me':
         echo $langue['es'];
-    }
-    elseif(AFFICHE == 'de'){
+        break;
+        case 'de':
         echo $langue['de'];
-    }
-    else{
+        break;
+        default:
         echo 'votre langue n\'est pas connu';
     }
       echo $retour; 
