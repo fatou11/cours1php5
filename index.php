@@ -1,8 +1,10 @@
 <?php
-   define('AFFICHE', 'fr');
+   define('AFFICHE', 'ca');
    $langue = array(
        'en'=>'<p style="color:bleue">I like PHP !</p>', 
-       'fr'=> '<p style="color:bleue">J\'aime PHP!</p>'
+       'fr'=> '<p style="color:bleue">J\'aime PHP!</p>',
+       'es'=> '<p style="color:bleue">Amore Hola!</p>',
+       'de'=> '<p style="color:bleue">hola welt</p>'
     );
     $retour = '<br/>';
 
@@ -19,18 +21,23 @@
 <body>
     <p>hello world</p>
     <?php
-      echo $langue[AFFICHE];
-      echo $retour;
-     
-        $a = true;
-        $b = false;
-        if(!$b){
-            echo 'condition verifiee';
-        }
-        else{
-            echo 'condition non verifier';
-        }
-       
+     // echo $langue[AFFICHE];
+    if(AFFICHE == 'en'){
+        echo $langue['en'];
+    }
+    else if(AFFICHE == 'fr' || AFFICHE == 'ca'){
+        echo $langue['fr'];
+    }
+    elseif(AFFICHE == 'es'){
+        echo $langue['es'];
+    }
+    elseif(AFFICHE == 'de'){
+        echo $langue['de'];
+    }
+    else{
+        echo 'votre langue n\'est pas connu';
+    }
+      echo $retour; 
         
     ?>
     
