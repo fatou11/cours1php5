@@ -42,7 +42,14 @@
         default:
         echo 'votre langue n\'est pas connu';
     }
-      echo $retour; 
+    
+    for ($i=0;$i<=10;$i++){
+        if($i == 5){
+        break;
+        }
+        echo $i.$retour;
+    }
+    echo 'Valeur de $i : '.$i;
         
     ?>
     
